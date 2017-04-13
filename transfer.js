@@ -12,9 +12,9 @@ fs.readFile('test.png', function(err, buffer){
     var height = png.getHeight();
     var pic = [];
 
-    for (var x = 0; x < width; x++) {
+    for (var y = 0; y < height; y++) {
       var line = [];
-      for (var y = 0; y < height; y++) {
+      for (var x = 0; x < width; x++) {
         var pixel = png.getPixel(x, y);
         if (pixel[3] !== 0) {
           var color = diff.closest({
